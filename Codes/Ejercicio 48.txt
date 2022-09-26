@@ -1,4 +1,3 @@
-
 Proceso Ejercicio_1
 	
 	Definir filas, columnas, suma, promedio Como real
