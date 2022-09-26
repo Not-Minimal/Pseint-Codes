@@ -1,1 +1,13 @@
-
+Proceso evaluarParNo
+	Definir x, par, impar Como Entero
+	leer x
+	Si (x%2=0) Entonces
+		Mostrar "X es par"
+		par <- (2*x)-5
+		Mostrar "El resultado de: (2X-5), es: ", par
+	SiNo
+		Mostrar "X es impar"
+		impar <- (3*x)-2
+		Mostrar "El resultado de: (3X-2), es: ", impar
+	Fin Si
+FinProceso

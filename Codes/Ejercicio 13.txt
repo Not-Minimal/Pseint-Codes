@@ -1,1 +1,23 @@
-
+Proceso ejercicio1
+	Definir x1, x2, x3 Como entero
+	Escribir "Ingrese tres variables cualesquiera: "
+	Leer x1, x2, x3
+	Si x1 > x2 y x1 > x3 Entonces
+		Mostrar x1, " Es Mayor que: " , x2, " y ", x3
+	FinSi
+	Si x2 > x1 y x2 > x3 Entonces
+		Mostrar x2, " Es Mayor que: " , x1, " y ", x3
+	FinSi
+	Si x3 > x1 y x3 > x2 Entonces
+		Mostrar x3, " Es Mayor que: " , x1, " y ", x2
+	FinSi
+	Si x1 = x2 y x1 = x3 Entonces
+		Mostrar x1, " Es igual que: " , x2, " y ", x3
+	FinSi
+	Si x2 = x1 y x2 = x3 Entonces
+		Mostrar x2, " Es igual que: " , x1, " y ", x3
+	FinSi
+	Si x3 = x1 y x3 = x2 Entonces
+		Mostrar x3, " Es igual que: " , x1, " y ", x2
+	FinSi
+FinProceso

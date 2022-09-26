@@ -1,1 +1,34 @@
-
+Proceso ejercicio_1_Saul_Munoz
+	//Autor: [Saul Arnulfo Muñoz Pedreros]
+	//Rut: [20.374.510-9]
+	//Ejercicio N°1
+		//Cree un algoritmo que permita evaluar la siguiente función para un valor de X
+		//entero positivo ingresado por teclado. (2,5pts)
+		//Definir Variables
+	Definir n, potencia, factorial Como Real
+	//Numeros enteros positivos
+	Repetir
+		Leer n
+	Hasta Que n > 0
+		
+		//Declarar variable con valores principales para los ciclos
+		factorial <- 1
+		potencia <- 1
+		exponente <- (2*n)
+		//Inicio de Condicional para calculo de funcion
+		//Si es par calcular potencia
+		Si ((n % 2) = 0) Entonces
+			Para i <- 1 Hasta exponente Hacer
+				base <- (n - 1)
+				potencia <- potencia * base
+			FinPara
+			Escribir "(",n, " - 1) a la ", exponente, " es: ", potencia
+		//Si es impar calcular factorial
+		SiNo
+			Para i <- 1 hasta n Hacer
+				factorial <- (factorial * i)
+				
+			FinPara
+			Escribir   "El factorial de [",i-1,"] es: ", factorial
+		Fin Si
+FinProceso

@@ -1,1 +1,75 @@
-
+Proceso edadesMayores
+	Definir n,j, contador ,x Como Entero
+	
+	Repetir
+		Escribir  "Ingrese la cantidad de edades: "
+		Leer n
+	Hasta Que n > 0
+	
+	Dimension v(n)
+	
+	//Muestra el vector con las edades
+	Para i <- 0 Hasta n-1 Hacer
+		v(i) <- Aleatorio(0,110)
+		Escribir "[",v(i),"]" Sin Saltar
+	FinPara
+	
+	//Buscar y mostrar la edad mayor
+	max <- v(0)
+	min <- v(0)
+	Para i <- 0 Hasta n-1 Hacer
+		//Buscar el mayor
+		si max < v(i) Entonces
+			max <- v(i)
+		FinSi
+		//Buscar el menor
+		si min > v(i) Entonces
+			min <- v(i)
+		FinSi
+	FinPara
+	
+	Escribir ""
+	Escribir "La edad maxima es: ", max
+	Escribir "La edad minima es: ", min
+	
+	//Buscar cuantos son mayores de 80 aÒos
+	contador <- 0
+	Escribir "Personas mayores o iguales a 80 aÒos."
+	Para i <- 0 Hasta n-1 Hacer
+		Si v(i) >= 80 Entonces
+			contador <- contador + 1
+		Fin Si
+	FinPara
+	Escribir "Los adultos mayores de 80 se repiten: ", contador, " veces"
+	
+	//Ordenar de Mayor a menor
+	
+	Para i <- 0 hasta n-1 con paso 1 Hacer
+		Para j <- 0 Hasta n-1 Con Paso 1 Hacer
+			si v(i) > v(j) Entonces
+				aux <- v(i)
+				v(i) <- v(j)
+				v(j) <- aux
+			FinSi
+		FinPara
+	FinPara
+	
+	Para i <- 0 Hasta n-1 Hacer
+		Mostrar "[",v(i),"]"
+	FinPara
+	
+	Mostrar "Que numero desea eliminar?"
+	leer x
+	Para i <- 0 Hasta n-1 Hacer
+		Si v(i) = x Entonces
+			Para j <- i Hasta n-2 Hacer
+				v(j) <- v(j+1)
+			FinPara
+			n <- n -1
+		FinSi
+	FinPara
+	Para i <- 0 Hasta n-1 Hacer
+		Mostrar "[",v(i),"]" Sin Saltar
+	FinPara
+	
+FinProceso

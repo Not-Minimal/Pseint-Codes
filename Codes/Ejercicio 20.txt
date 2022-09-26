@@ -1,1 +1,16 @@
-
+Proceso tablaMultiplicar
+	Definir n, i, p, multiplo Como Entero
+	Escribir "Introduzca el valor"
+	leer n
+	Escribir "Introduzca el multiplo"
+	leer i
+	p <-1
+	
+	Mientras  p <= n Hacer
+		multiplo <- i * p
+		Escribir multiplo 
+		p <- p + 1
+	FinMientras
+	
+	
+FinProceso

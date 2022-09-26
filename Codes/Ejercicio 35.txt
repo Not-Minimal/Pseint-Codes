@@ -1,1 +1,20 @@
-
+Proceso Ejercicio5
+	definir x,b,n,f, pot, i, j como real
+	Leer n
+	Para j = 1 Hasta n Con Paso 1 Hacer
+		x <- Aleatorio(1,15)
+		Si x % 2 = 0 Entonces
+			pot <- 1
+			Para i = 1 Hasta (x+3) Con Paso 1 Hacer
+				pot <- pot*(x)
+			FinPara
+			Escribir "La Potencia de " x " es: ", 2*pot
+		SiNo
+			f <- 1
+			Para i = 1 Hasta (x-1) Con Paso 1 Hacer
+				f <- f*i
+			Fin Para
+			Escribir "El Factorial de (", x, "-1)! es: ", f
+		Fin Si
+	Fin Para
+FinProceso

@@ -1,1 +1,8 @@
-
+Proceso nAleatorios
+	Definir n, i Como entero
+	Leer n
+	Para  i <- 1 Hasta n 
+		Escribir Aleatorio(1,20)
+	FinPara
+	
+FinProceso

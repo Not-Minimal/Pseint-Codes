@@ -1,1 +1,25 @@
-
+Proceso calculosueldo
+	Definir sueldoSemanal, horasTrabajadas, HorasExtras, TotalHoraExtra, valorHora, totalHorasTrabajadas Como Real
+	Mostrar "Ingrese el Valor de Hora Normal"
+	leer valorHora
+	Mostrar "Ingrese las Horas Trabajadas en la semana"
+	leer horasTrabajadas
+	Si horasTrabajadas > 40 y horasTrabajadas <= 120 Entonces //para calcular horas extras y sueldo semanal
+		HorasExtras <- (horasTrabajadas - 40)
+		TotalHoraExtra <- (HorasExtras*(2*valorHora))
+		Mostrar "El total de las horas extraordinarias trabajadas es: ", TotalHoraExtra
+		totalHorasTrabajadas <- (40*valorHora)
+		Mostrar "El valor de las horas ordinarias es: ", totalHorasTrabajadas
+		sueldoSemanal <- (TotalHoraExtra+totalHorasTrabajadas)
+		Mostrar "El sueldo semanal del trabajador es igual a: ", sueldoSemanal
+	SiNo
+		Si horasTrabajadas >= 0 y horasTrabajadas <= 40 Entonces //para calcular horas trajadas entre 0 y 40
+			sueldoSemanal <- (horasTrabajadas*valorHora)
+			Mostrar "El sueldo semanal es de: ", sueldoSemanal
+		SiNo
+			Si horasTrabajadas < 0 o horasTrabajadas > 121 Entonces //para validar que las horas no son negativas, ni mayores a 120. (Quien trabaja mas de 120 Horas :?)
+				Mostrar "Las horas trabajadas deben ser mayor a 0 y menor a 121"
+			Fin Si
+		Fin Si
+	Fin Si
+FinProceso

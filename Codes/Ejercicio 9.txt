@@ -1,1 +1,11 @@
-
+Proceso ejercicio1
+	Definir x1, resultado Como Real
+	Escribir "Ingrese la variable x, para el calculo de la función (2x(3) - 2) / (x + 1):"
+	Leer x1
+	Si x1 = -1 Entonces
+		Mostrar "Debe ser distinto de -1"
+	SiNo
+		resultado <- ((2*(x1*x1*x1)-2)/(x1+1))
+		Mostrar "La función obtenida es: ", resultado 
+	Fin Si
+FinProceso

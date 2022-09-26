@@ -1,1 +1,13 @@
-
+Proceso evaluarMultiplo
+	Definir X, multiplo, noMultiplo Como Entero
+	leer X
+	Si (X%5=0) Entonces
+		Mostrar X, " Es multiplo de 5"
+		multiplo <- (2*X)
+		Mostrar "El resultado de: (2X), es: ", multiplo
+	SiNo
+		Mostrar X, " no es multiplo de 5"
+		noMultiplo <- (-1*X)
+		Mostrar "El resultado de: (3X-2), es: ", noMultiplo
+	Fin Si
+FinProceso

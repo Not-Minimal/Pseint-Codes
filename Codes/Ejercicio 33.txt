@@ -1,1 +1,20 @@
 
+ Proceso edadAleatoria
+	Definir n, i, x,ma,me Como entero
+	Leer n
+	ma <- 0
+	me <- 0
+	Para  i <- 1 Hasta n 
+		x <- Aleatorio(0,110)
+		Escribir  "Edad ",x
+		Si x >= 18 Entonces
+			ma <- ma + 1
+		SiNo
+			Si x <= 17 Entonces
+				me <- me + 1
+			FinSi
+		FinSi
+	FinPara
+	Mostrar "Los mayores de edad son ", ma
+	Mostrar "Los menores de edad son ", me
+FinProceso

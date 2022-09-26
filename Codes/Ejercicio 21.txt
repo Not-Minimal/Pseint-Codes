@@ -1,1 +1,18 @@
-
+Algoritmo ejercicioN1
+	definir n, x, i Como Entero
+	Repetir
+		Mostrar "Ingrese los valores a sumar"
+		Leer n
+	Hasta Que n > 0
+	
+	suma <- 0
+	x <- 1
+	
+	Mientras  x <= n Hacer
+		Mostrar "Ingrese los valores ", x "a sumar"
+		leer i
+		suma <- suma + i
+		x <- x+1
+	Fin Mientras
+	Escribir "El resultado es: ", suma
+FinAlgoritmo

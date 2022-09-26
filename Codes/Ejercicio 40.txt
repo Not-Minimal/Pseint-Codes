@@ -1,1 +1,16 @@
-
+Proceso ingresar_valores
+	Dimension v(10)
+	Definir i Como Entero
+	
+	Para i <- 0 Hasta 10-1 Hacer
+		Escribir  "Ingrese Valor v(", i,"): "
+		Leer v(i)
+	FinPara
+	
+	Escribir "Los valores del arreglo son: "
+	
+	Para i <- 0 Hasta 10-1 Hacer
+		Escribir "[",v(i),"]" Sin Saltar
+	FinPara
+	
+FinProceso

@@ -1,1 +1,21 @@
-
+Proceso ejercicio_4
+	definir n, i Como Entero 
+	leer n 
+	SumaNotas <- 0
+	Para i <- 1 Hasta n con paso 1
+		x <- Aleatorio(10,70)
+		Si x < 40 Entonces
+			Escribir x " Es una nota reprobada"
+		SiNo
+			Escribir x " Es una nota aprobada"
+		FinSi
+		SumaNotas <- SumaNotas + x
+	FinPara
+	PromedioNotas <- SumaNotas / n
+	Escribir "El promedio de todas las notas es " PromedioNotas
+	Si PromedioNotas < 40 Entonces
+		Escribir "Este promedio esta reprobado"
+	SiNo
+		Escribir "Este promedio esta aprobado, Felycidades"
+	FinSi
+FinProceso

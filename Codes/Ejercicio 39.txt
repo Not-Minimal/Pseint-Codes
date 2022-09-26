@@ -1,1 +1,18 @@
 
+Proceso ingresar_valores_aleatorio
+	
+	Definir n,i Como Entero
+	
+	Repetir
+		Escribir  "Ingrese el tamaÒo del arreglo: "
+		Leer n
+	Hasta Que n > 1
+	
+	Dimension v(n)
+	
+	Para i <- 0 Hasta n-1 Hacer
+		v(i) <- Aleatorio(-10,10)
+		Escribir "[",v(i),"]" 
+	FinPara
+	
+FinProceso

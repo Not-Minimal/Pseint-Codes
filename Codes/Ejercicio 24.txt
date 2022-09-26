@@ -1,1 +1,20 @@
-
+Proceso cocienteResto
+	Definir a,b,i,u,resultado Como Real
+	Repetir
+		Escribir 'Ingrese el primer termino'
+		Leer a
+		Escribir 'Ingrese el segundo termino'
+		Leer b
+	Hasta Que b<=a Y (a<>0 Y b<>0)
+	u <- 0
+	i <- 1
+	
+	Repetir
+		resultado <- 0
+		resultado <- (a - b)
+		i <- i + 1
+		resultado <- resultado - b
+		Mostrar i
+	Hasta Que i <= b
+	
+FinProceso

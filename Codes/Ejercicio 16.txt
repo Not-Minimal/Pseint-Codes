@@ -1,1 +1,13 @@
-
+Proceso evaluarMultiplo7o10
+	Definir X, multiplo7, Multiplo10 Como Entero
+	leer X
+	Si (X%7=0) Entonces
+		Mostrar X, " Es multiplo de 7"
+	SiNo
+		Si (X%10=0) Entonces
+			Mostrar X, " Es multiplo de 10"
+		SiNo
+			Mostrar X, " No es multiplo de 7 ni 10"
+		Fin Si
+	Fin Si
+FinProceso

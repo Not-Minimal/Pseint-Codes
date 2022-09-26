@@ -1,1 +1,35 @@
+Proceso ejercicio1
+	//Cree un programa que mediante funciones calcule el resultado de evaluar x en la
+	//siguiente función. Nota: el valor de x debe ser ingresados por teclado en la función principal
+	//Definir variable para calculo de funcion
+	Definir n, potencia, factorial Como real
+	
+	//Muestra Texto
+	Mostrar "Ingrese el numero para determinar la funcion correspondiente"
+	//Lee la variable ingresada por teclado
+	leer n
+	
+	//Declarar variable con valores principales para los ciclos
+	contador <- 0
+	factorial <- 1
+	potencia <- 1
+	
+	//Inicio de Condicional para calculo de funcion
+	
+	//Si es impar
+	Si n % 2 <> 0 Entonces
+		Para i <- 1 Hasta n Hacer
+			resultado = (2*n)
+			potencia <- potencia * resultado
+		FinPara
+		Mostrar "f(x) = (2*", n, ") a la ", n, " es: " ,potencia
+		//Si es pár
+	SiNo
+		Para i <- 1 hasta n Hacer
+			factorial <- (factorial * i)
+			Mostrar  "El factorial es: ", factorial
+		FinPara
+	Fin Si
+	
+FinProceso
 

@@ -1,1 +1,25 @@
-
+Proceso edades
+	
+	Definir i Como Entero
+	Definir suma Como Real
+	Dimension v(10)
+	
+	Para i<-0 Hasta 9 Hacer
+		Escribir "Ingrese edad en(", i, "): "
+		
+		Repetir
+			Leer v(i)
+		Hasta Que v(i)>= 0 y v(i) <=120
+	FinPara
+	
+	Para i <- 0 Hasta 9 Hacer
+		Escribir "[",v(i),"]"
+	FinPara
+	
+	suma = 0
+	Para i <- 0 Hasta 9 Hacer
+		suma = suma + v(i)
+	FinPara
+	Escribir  " El promedio de edades es: ",(suma/10)
+	
+FinProceso

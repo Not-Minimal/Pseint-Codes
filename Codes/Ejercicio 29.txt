@@ -1,1 +1,11 @@
-
+Proceso potencia
+	Definir x, i, base, ex Como Entero
+	leer base, ex
+	
+	pot <- 1
+	Para i = 1 Hasta ex Con Paso 1 Hacer
+		pot <- pot*base
+	FinPara
+	Escribir "La Potencia es: ", pot
+	
+FinProceso

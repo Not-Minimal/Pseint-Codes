@@ -1,1 +1,25 @@
-
+Algoritmo funciomx
+	Definir x Como Real
+	Leer x
+	
+	Si x<0 Entonces
+		x<- (x*x)-(2*x)-5 
+		Mostrar x
+	SiNo
+		Si 0<=x y x<3 Entonces
+			x<- (x*x*x)+3*(x*x)
+			Mostrar x
+ 		SiNo
+			Si 3<=x y x<5 Entonces
+				x<- (x*x*x*x)-4*(x*x*x)+(x*x)
+				Mostrar x
+			SiNo
+				Si x>=5 Entonces
+					x<- (x*x*x*x*x)-5*(x*x*x)+(x*x*x*x)
+					Mostrar x
+				Fin Si
+			Fin Si
+		Fin Si
+	Fin Si
+	
+FinAlgoritmo

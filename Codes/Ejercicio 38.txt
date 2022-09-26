@@ -1,1 +1,17 @@
-
+Proceso temperaturas
+	
+	Definir i,n Como Entero
+	Dimension v(24)
+	
+	Para i <- 0 Hasta 24-1 Hacer
+		v(i) <- Aleatorio(-273,273)
+		Escribir "[",v(i),"C∞]"
+	FinPara
+	Escribir "Temperaturas menores o iguales a 0"
+	Para i <- 0 Hasta 24-1 Hacer
+		Si v(i) <= 0 Entonces
+			Escribir "[",v(i),"C∞]"
+		Fin Si
+	FinPara
+	
+FinProceso

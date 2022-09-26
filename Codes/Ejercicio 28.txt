@@ -1,1 +1,10 @@
-
+Proceso Factorial
+	definir s,i,n, resultado Como real
+	Leer n
+	
+	s <- 0
+	Para i = 0 Hasta n Con Paso 1 Hacer
+		s <- s+i
+	Fin Para
+	Escribir "La suma es: ", s
+FinProceso

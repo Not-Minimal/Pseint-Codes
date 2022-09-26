@@ -1,1 +1,31 @@
+Proceso mulWithSuma
+	definir a, b, i, resultado como real
+	Mostrar "Ingrese el primer termino a multiplicar"
+	leer a
+	Mostrar "Ingrese el segundo termino a multiplicar"
+	leer b
+	
+	resultado <- a
+	si b = 0 o a = 0 Entonces
+		resultado = 0
+	FinSi
+	
+	si b > 0 Entonces
+		i <- 1
+		Mientras b > i Hacer
+			resultado <- resultado + a
+			i <- i + 1
+		FinMientras
+	FinSi
+	
+	si b < 0 y a < 0 Entonces
+		i <- -1
+		Mientras b < i Hacer
+			resultado <- resultado - a
+			i <- i - 1
+		FinMientras
+	FinSi
 
+	Escribir  "El resultado es: ", resultado
+	
+FinProceso

@@ -1,1 +1,12 @@
-
+Proceso tabla7
+	Definir n, i, multiplo Como Entero
+	Escribir "Introduzca la cantidad de multiplicaciones"
+	leer n
+	i <- 1
+	Mientras  i<=n Hacer
+		
+		multiplo <- i*7
+		Escribir multiplo 
+		i <- i+1
+	FinMientras
+FinProceso

@@ -1,1 +1,8 @@
-
+Proceso nAleatoriosAlgoritmo
+	Definir n, i, x Como entero
+	Leer n
+	Para  i <- 1 Hasta n 
+		x<-Aleatorio(-20,20)
+	  Escribir  "f(",x,") = ",((3*(x*x))+5)
+	FinPara
+FinProceso

@@ -1,1 +1,30 @@
-
+Proceso promedio_productos
+	
+	Definir i,n Como Entero
+	Definir suma Como Real
+	
+	Repetir
+		Escribir  "Ingrese el tamaÒo del arreglo: "
+		Leer n
+	Hasta Que n > 1
+	
+	Dimension v(n)
+	
+	Para i<-0 Hasta n-1 Hacer
+		Escribir "Ingrese valor producto en(", i, "): "
+		Repetir
+			Leer v(i)
+		Hasta Que v(i) > 590
+	FinPara
+	
+	Para i <- 0 Hasta n-1 Hacer
+		Escribir "[",v(i),"]" 
+	FinPara
+	
+	suma = 0
+	Para i <- 0 Hasta n-1 Hacer
+		suma = suma + v(i)
+	FinPara
+	Escribir  " El promedio de los productos es: ",(suma/n)
+	
+FinProceso

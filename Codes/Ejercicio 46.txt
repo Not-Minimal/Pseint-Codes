@@ -1,1 +1,66 @@
 
+Proceso ejercicio_2_Saul_Munoz
+	//Autor: [Saul Arnulfo Muñoz Pedreros]
+	//Rut: [20.374.510-9]
+	//Ejercicio N°2
+		//Un hogar de ancianos necesita almacenar las edades de sus N residentes para
+		//realizar análisis de datos. Se le pide a usted crear un algoritmo que permita
+		//registrar las edades de N adultos mayores a un vector y mostrar la siguiente
+		//información: (3,5 pts)
+	
+	//Definir variables
+	Definir n, grupoEtario1, grupoEtario2, max, min Como Entero
+	//Definir la cantidad de ancianos
+	Repetir
+		Escribir  "Ingrese la cantidad de ancianos en el hogar: "
+		Leer n
+	Hasta Que n > 0
+	
+	//Definir el arreglo de tamaño n
+	Dimension v(n)
+	
+	//Muestra el arreglo con las edades
+	Escribir "a) Mostrar todas las edades: "
+	Para i <- 0 Hasta n-1 Hacer
+		v(i) <- Aleatorio(65,120)
+		Escribir "[",v(i),"]" Sin Saltar
+	FinPara
+	Escribir ""
+	Escribir ""
+	//Buscar grupos etarios
+	grupoEtario1 <- 0
+	grupoEtario2 <- 0
+	Escribir "b) Mostrar cuantas edades están en el rango etario [70,79] y [80,89]:"
+	Para i <- 0 Hasta n-1 Hacer
+		Si v(i) >= 70 y v(i) <= 79 Entonces
+			grupoEtario1 <- grupoEtario1 + 1
+		Fin Si
+	FinPara
+	Para i <- 0 Hasta n-1 Hacer
+		Si v(i) >= 80 y v(i) <= 89 Entonces
+			grupoEtario2 <- grupoEtario2 + 1
+		Fin Si
+	FinPara
+	Escribir "Los entre 70 y 79 años se repiten: ", grupoEtario1, " veces"
+	Escribir "Los entre 80 y 89 años se repiten: ", grupoEtario2, " veces"
+	
+	//Buscar y mostrar la edad mayor
+	max <- v(0)
+	min <- v(0)
+	
+	Para i <- 0 Hasta n-1 Hacer
+		//Buscar el mayor
+		si max < v(i) Entonces
+			max <- v(i)
+		FinSi
+		//Buscar el menor
+		si min > v(i) Entonces
+			min <- v(i)
+		FinSi
+	FinPara
+	Escribir ""
+	Escribir "c) Mostrar la edad mayor y menor del conjunto de edades: "
+	Escribir "La edad mayor es: ", max
+	Escribir "La edad menor es: ", min
+
+FinProceso

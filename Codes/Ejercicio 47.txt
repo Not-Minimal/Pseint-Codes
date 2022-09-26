@@ -1,1 +1,48 @@
 
+Proceso Ejercicio_1
+	
+	Definir filas, columnas, suma, promedio Como real
+	
+	Mostrar "Ingrese el tamaño de las filas"
+	
+	Repetir
+		Leer filas
+	Hasta Que filas > 1
+	
+	Mostrar "Ingrese el tamaño de las filas"
+	
+	Repetir
+		Leer columnas
+	Hasta Que columnas > 1
+	
+	Dimension vector(filas, columnas)
+	
+	suma <- 0
+	
+	Para i <- 0 hasta filas - 1 Hacer
+		Para j <- 0 Hasta columnas - 1 Hacer
+			vector(i,j) <- Aleatorio(1,9)
+			suma <- suma + vector(i,j)
+		FinPara
+	FinPara
+	
+	promedio <- (suma/(filas*columnas))
+	valoresMP <- 0
+	
+	Para i <- 0 hasta filas - 1 Hacer
+		Para j <- 0 Hasta columnas - 1 Hacer
+			Mostrar "[",vector(i,j),"]" sin saltar
+			suma <- suma + vector(i,j)
+			Si vector(i,j) > promedio Entonces
+				valoresMP <- valoresMP + 1
+			FinSi
+		FinPara
+		Mostrar ""
+	FinPara
+	
+	
+	Mostrar "El promedio entre todos los valores es: ", promedio
+	Mostrar "Los valores mayores al promedio son: ", valoresMP
+	
+	
+FinProceso

@@ -1,1 +1,10 @@
-
+Proceso ejercicio1
+	Definir neto, iva, total Como Real
+	Escribir "Ingrese el valor neto de un producto o servicio: "
+	Repetir
+			Leer neto
+			iva <- neto*0.19
+			total <- neto*1.19
+			Mostrar "El valor neto del producto es: $", neto, ", su IVA es de: $", iva, " Entonces su precio total es: $",total 
+		Hasta Que neto >= 180
+FinProceso

@@ -1,1 +1,88 @@
 
+Proceso ejercicio2
+	//Desarrolle un algoritmo que permita ingresar valores por teclado mayores que 10 a
+	//un vector de tamaño N y luego realice las siguientes acciones:
+	
+	//Definir Variables
+	Definir n, x, potencia, factorial Como Real
+	
+	//Solicita por pantalla un tamaño de arreglo mayor a 1
+	Mostrar "Ingrese el tamaño del arreglo: "
+	Repetir
+		leer n
+	Hasta Que n > 1
+	
+	//Se crea el arreglo de tamaño n
+	Dimension arreglo(n)
+	//Llenar arreglo con valores mayores a 10
+	
+	//Se crea validacion para que cumpla condicion
+	
+	Para i <- 0 Hasta n - 1 Hacer
+		Escribir "Ingrese valor en posicion: [", i, "]: "
+		Repetir
+			Leer arreglo(i)
+		Hasta Que arreglo(i) > 10
+	FinPara
+	//suma todos los numeros ingresados
+	suma <- 0
+	promedio <- 0
+	Para i <- 0 hasta n - 1 hacer 
+		suma = suma + arreglo(i)
+		promedio = (suma/n)
+	FinPara
+	Mostrar "La suma de todos los numeros es: ", suma
+	
+	//Calcula el promedio de los numeros
+	promedio <- 0
+	Para i <- 0 hasta n - 1 hacer 
+		promedio = (suma/n)
+	FinPara
+	Mostrar "El promedio de todos los numeros es: ", promedio
+	
+	//Calcula mayor y menor numero del vector
+	mayor <- arreglo(0)
+	menor <- arreglo(0)
+	Para i <- 0 hasta n - 1 Hacer
+		si mayor < arreglo(i) Entonces
+			mayor <- arreglo(i)
+		FinSi
+		si menor > arreglo(i) Entonces
+			menor <- arreglo(i)
+		FinSi
+		FinPara
+	Mostrar "La valor mayor es: ", mayor
+	Mostrar "El valor menor es: ", menor
+
+	//Mostar la cantidad de numero pares que hay dentro del vector
+	numpar <- 0
+	Para i <- 0 hasta n - 1 Hacer
+		si (arreglo(i) % 2) = 0 Entonces
+			numpar <- numpar + 1
+		FinSi
+	FinPara
+	Mostrar "El total de numeros pares que existen es: " numpar
+	
+	//Declarar variable con valores principales para los ciclos
+	contador <- 0
+	factorial <- 1
+	potencia <- 1
+	
+	//Inicio de Condicional para calculo de funcion
+	
+	//Si es impar
+	Si n % 2 <> 0 Entonces
+		Para i <- 1 Hasta n Hacer
+			resultado = (2*n)
+			potencia <- potencia * resultado
+		FinPara
+		Mostrar potencia
+		//Si es pár
+	SiNo
+		Para i <- 1 hasta n Hacer
+			factorial <- (factorial * i)
+			Mostrar  "El factorial es: ", factorial
+		FinPara
+	Fin Si
+	
+FinProceso

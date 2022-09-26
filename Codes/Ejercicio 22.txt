@@ -1,1 +1,29 @@
-
+Proceso Ejercicio4
+	Definir n, edad, i, promEdad, mayor, menor, suma Como Real
+	Repetir
+		Escribir "Cuantas edades quiere promediar"
+		leer n
+	Hasta Que n > 1
+	mayor <- -99999999
+	menor <- 99999999
+	i <- 1
+	suma <- 0
+	Mientras i <= n Hacer
+		Repetir
+			Escribir "Ingrese la edad N° ", i
+			Leer edad
+		Hasta Que edad <= 120 y edad >=0
+		Si Mayor < edad Entonces
+			Mayor <- edad
+		Fin Si
+		Si Menor > edad Entonces
+			menor <- edad
+		FinSi
+		i <- i + 1
+		suma <- Edad + suma
+	Fin Mientras
+	promEdad <- (suma / (i - 1))
+	Escribir "El promedio es: ", promEdad
+	Escribir "El mayor es: ", Mayor
+	Escribir "El menor es: ", Menor
+FinProceso
