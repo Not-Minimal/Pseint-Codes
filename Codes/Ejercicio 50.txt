@@ -1,4 +1,3 @@
-
 Proceso Ejercicio_1
 	
 	Definir filas, columnas, suma, promedio Como real
@@ -7,41 +6,37 @@ Proceso Ejercicio_1
 	
 	Repetir
 		Leer filas
-	Hasta Que (filas > 1) y (filas % 2 <> 0)
+	Hasta Que (filas > 1)
 	
-	Mostrar "Ingrese el tamaño de las filas"
-	
-	columnas <- filas
+	Mostrar "Ingrese el tamaño de las columnas"
+	Repetir
+		Leer columnas
+	Hasta Que (columnas > 1)
 	
 	Dimension vector(filas, columnas)
-	
-	elementoCentro <- 0 
-	
 	Para i <- 0 hasta filas - 1 Hacer
+		sumaColumna <- 0
+		sumaFila <- 0
 		Para j <- 0 Hasta columnas - 1 Hacer
-			vector(i,j) <- Aleatorio(1,9)
-			si (i = j) y i+j = filas - 1  Entonces
-				elementoCentro <- vector(i,j)
+			vector(i,j) <- Aleatorio(1,10)
+			Si j < columnas - 1 Entonces
+				sumaColumna <- sumaColumna + vector(i,j)
+			SiNo
+				vector(i,j) <- sumaColumna
 			FinSi
-			
+			Si i < filas - 1 Entonces
+				sumaFila <- sumaFila + vector(i,j)
+			SiNo
+				vector(i,j) <- 0
+			FinSi
 		FinPara
-	FinPara
-	
-
-	valoresMC <- 0
+	FinPara 
 	
 	Para i <- 0 hasta filas - 1 Hacer
 		Para j <- 0 Hasta columnas - 1 Hacer
 			Mostrar "[",vector(i,j),"]" sin saltar
-			Si vector(i,j) < elementoCentro Entonces
-				valoresMC <- valoresMC + 1
-			FinSi
 		FinPara
 		Mostrar ""
 	FinPara
-	
-	Mostrar ""
-	Mostrar "El elemento centro es: ", elementoCentro
-	Mostrar "Los valores menores al elemento centro son: ", valoresMC
 	
 FinProceso

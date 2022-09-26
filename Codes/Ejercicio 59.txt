@@ -1,0 +1,43 @@
+Proceso Ejercicio_1
+	
+	Definir filas, columnas Como Entero
+	
+	Mostrar "Ingrese la cantidad de filas y columnas"
+	Repetir
+		leer filas
+	Hasta Que filas > 1
+	
+	columnas <- filas
+	
+	
+	Dimension vector(filas,columnas)
+	
+	sumaDiagonalP <- 0
+	sumaDiagonalS <- 0
+	
+	Para i <- 0 hasta filas - 1 Hacer
+		Para j <- 0 hasta columnas - 1 Hacer
+			vector(i,j) <- Aleatorio(1,4)
+			Si i = j  Entonces
+				sumaDiagonalP <- sumaDiagonalP + vector(i,j)
+			SiNo
+				Si i + j = filas - 1 Entonces
+					sumaDiagonalS <- sumaDiagonalS + vector(i,j)
+				FinSi
+			FinSi
+		FinPara
+	FinPara
+	
+	Para i <- 0 hasta filas - 1 Hacer
+		Para j <- 0 hasta columnas - 1 Hacer
+			Mostrar "[", vector(i,j),"]" Sin Saltar
+		FinPara
+		Mostrar ""
+	FinPara
+	
+	Mostrar ""
+	Mostrar "La suma de la siagonal principal es: ", sumaDiagonalP
+	Mostrar "La suma de la siagonal secundaria es: ", sumaDiagonalS	
+	
+FinProceso
+	

@@ -1,4 +1,3 @@
-
 Proceso Ejercicio_1
 	
 	Definir filas, columnas, suma, promedio Como real
@@ -7,7 +6,7 @@ Proceso Ejercicio_1
 	
 	Repetir
 		Leer filas
-	Hasta Que (filas > 1) y (filas % 2 <> 0)
+	Hasta Que (filas > 1)
 	
 	Mostrar "Ingrese el tamaño de las filas"
 	
@@ -15,33 +14,81 @@ Proceso Ejercicio_1
 	
 	Dimension vector(filas, columnas)
 	
-	elementoCentro <- 0 
+	Para i <- 0 hasta filas - 1 Hacer
+		Para j <- 0 Hasta columnas - 1 Hacer
+			vector(i,j) <- 0
+			Si i = 0 Entonces
+				vector(i,j) <- 1
+			FinSi
+			Si j = 0 Entonces
+				vector(i,j) <- 1
+			FinSi
+			Si i = filas - 1 Entonces
+				vector(i,j) <- 1
+			FinSi
+			Si j = columnas - 1 Entonces
+				vector(i,j) <- 1
+			FinSi
+		FinPara
+	FinPara
 	
 	Para i <- 0 hasta filas - 1 Hacer
 		Para j <- 0 Hasta columnas - 1 Hacer
-			vector(i,j) <- Aleatorio(1,9)
-			si (i = j) y i+j = filas - 1  Entonces
-				elementoCentro <- vector(i,j)
+			Mostrar "[",vector(i,j),"]" sin saltar
+		FinPara
+		Mostrar ""
+	FinPara
+	
+	Para i <- 0 hasta filas - 1 Hacer
+		Para j <- 0 Hasta columnas - 1 Hacer
+			vector(i,j) <- 0
+			Si j = 0 Entonces
+				vector(i,j) <- 1
+			FinSi
+			Si i = columnas - 1 Entonces
+				vector(i,j) <- 1
+			FinSi
+		FinPara
+	FinPara
+	
+	Mostrar ""
+	
+	Para i <- 0 hasta filas - 1 Hacer
+		Para j <- 0 Hasta columnas - 1 Hacer
+			Mostrar "[",vector(i,j),"]" sin saltar
+		FinPara
+		Mostrar ""
+	FinPara
+	
+	
+	mitad <- 0
+	Para i <- 0 hasta filas - 1 Hacer
+		Para j <- 0 Hasta columnas - 1 Hacer
+			vector(i,j) <- 0
+			mitad <- redon(columnas/2)
+			Si j = 0 Entonces
+				vector(i,j) <- 1
+			FinSi
+			Si i = mitad Entonces
+				vector(i,j) <- 1
+			FinSi
+			Si i = 0 Entonces
+				vector(i,j) <- 1
+			FinSi
+			Si j = columnas - 1 Entonces
+				vector(i,j) <- 1
 			FinSi
 			
 		FinPara
 	FinPara
 	
-
-	valoresMC <- 0
+	Mostrar ""
 	
 	Para i <- 0 hasta filas - 1 Hacer
 		Para j <- 0 Hasta columnas - 1 Hacer
 			Mostrar "[",vector(i,j),"]" sin saltar
-			Si vector(i,j) < elementoCentro Entonces
-				valoresMC <- valoresMC + 1
-			FinSi
 		FinPara
 		Mostrar ""
 	FinPara
-	
-	Mostrar ""
-	Mostrar "El elemento centro es: ", elementoCentro
-	Mostrar "Los valores menores al elemento centro son: ", valoresMC
 	
 FinProceso

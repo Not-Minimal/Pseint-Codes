@@ -1,0 +1,1 @@
+Ejercicio 3: Dado una matriz A(n , m) con valores aleatorios, cree una matriz B(m , n) copiando los valores de A en B de la siguiente forma

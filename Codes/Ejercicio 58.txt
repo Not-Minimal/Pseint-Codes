@@ -1,0 +1,44 @@
+Proceso Ejercicio_1
+	
+	Definir filas, columnas Como Entero
+	
+	Mostrar "Ingrese la cantidad de filas"
+	Repetir
+		leer filas
+	Hasta Que filas > 1
+	
+	Mostrar "Ingrese la cantidad de columnas"
+	Repetir
+		leer columnas
+	Hasta Que columnas > 1
+	
+	Dimension vector(filas,columnas)
+	
+	numerosPares <- 0
+	numerosImpares <- 0
+	
+	Para i <- 0 hasta filas - 1 Hacer
+		Para j <- 0 hasta columnas - 1 Hacer
+			vector(i,j) <- Aleatorio(1,100)
+			Si vector(i,j) % 2 = 0 Entonces
+				numerosPares <- numerosPares + 1
+			SiNo
+				numerosImpares <- numerosImpares + 1
+			FinSi
+		FinPara
+	FinPara
+	
+	Para i <- 0 hasta filas - 1 Hacer
+		Para j <- 0 hasta columnas - 1 Hacer
+			Mostrar "[", vector(i,j),"]" Sin Saltar
+		FinPara
+		Mostrar ""
+	FinPara
+	
+	Mostrar ""
+	Mostrar "Los numeros Impares son: ", numerosImpares
+	Mostrar "Los numeros Pares son: ", numerosPares
+	
+	
+FinProceso
+	

@@ -1,0 +1,46 @@
+Proceso tabalaMultiplicar
+	
+	//Varibale para tamaño matriz Cuadrada
+	Definir n como entero
+	
+	//Tamaño de Matriz siempre mayor a 1
+	Mostrar "Ingrese la tabla a conocer"
+	Repetir
+		Leer n
+	Hasta Que n > 1 
+	
+	n <- n + 1
+	
+	//Declarar Dimension para matriz cuadrada
+	Dimension vector(n,n)
+	
+	//Iniciar Ciclos Para matriz
+	
+	Para i <- 0 hasta n - 1 Hacer
+		Para j <- 0 hasta n - 1 Hacer
+			//Lenar cada fila y columna con cada tabla de multiplicar segun su intervalo
+			Si i+j = j+i Entonces
+				vector(i,j) <- i*j
+			FinSi
+			//Reestablece el valor de la fila de 0 a n
+			Si i = 0 Entonces
+				vector(i,j) <- j
+			FinSi
+			//Reestable el valor de la columna de 0 a n
+			Si j = 0 Entonces
+				vector(i,j) <- i
+			FinSi
+		FinPara
+	FinPara
+	
+	
+	//Mostrar matriz con tabla de multiplicar
+	Para i <- 0 hasta n - 1 Hacer
+		Para j <- 0 hasta n - 1 Hacer
+			Escribir  "[",vector(i,j),"]" Sin Saltar
+		FinPara
+			Mostrar ""
+	FinPara
+
+	
+FinProceso

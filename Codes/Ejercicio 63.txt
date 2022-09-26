@@ -1,0 +1,16 @@
+Proceso tablaMultiplicar
+	Definir n, x Como Entero
+	
+	Mostrar "Que tabla desea?"
+	Repetir
+		Leer n
+	Hasta Que n > 1 
+	
+	Dimension Arreglo(n)
+	
+	Para i <- 0 hasta n-1 Hacer
+		arreglo(i) <- n * (i+1)
+		Mostrar n,"*", (i+1) " = ", arreglo(i)
+	FinPara
+	
+FinProceso

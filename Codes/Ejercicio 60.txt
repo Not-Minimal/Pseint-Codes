@@ -1,0 +1,2 @@
+Ejercicio 5: Promedio de Triangulo superior, inferior y cual es mayor.
+Perdi el codigo ;((

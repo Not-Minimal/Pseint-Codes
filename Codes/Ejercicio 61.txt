@@ -1,0 +1,36 @@
+Proceso secuenciaFiboArregloInvertido
+	
+	//Varibale para tamaño matriz Cuadrada
+	Definir n como entero
+	
+	//Tamaño de Matriz siempre mayor a 1
+	Mostrar "Ingrese la cantidad de resultado fibonnaci"
+	Repetir
+		Leer n
+	Hasta Que n > 1 
+	
+	//Declarar Dimension para matriz cuadrada
+	Dimension vector(n)
+	
+	//Variables con sus valores iniciales
+	a <- 0
+	b <- 1
+	
+	//Iniciar Ciclos Para matriz
+	Para i <- 2 hasta n - 1 Hacer
+			
+		//Algoritmo principal fibonnaci
+		vector(0) <- 0
+		vector(1) <- 1
+		vector(i) <- a + b
+		a <- b
+		b <- vector(i)
+		
+	FinPara
+	
+	Para i <- n - 1 hasta 0 Hacer
+		Mostrar "[",vector(i),"]" Sin Saltar
+		
+	FinPara
+
+FinProceso

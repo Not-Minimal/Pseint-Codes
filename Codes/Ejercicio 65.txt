@@ -1,0 +1,73 @@
+Proceso MatrizeArreglo
+	Definir filas, columnas Como Entero
+	
+	Mostrar "Ingrese la cantidad de filas y columnas para la matriz cuadrada, ademas de impar"
+	Repetir
+		leer filas
+	Hasta Que filas > 1 y filas % 2 <> 0
+	
+	columnas <- filas
+	
+	Dimension matriz(filas, columnas)
+	Dimension vectorA(filas)
+	Dimension vectorB(filas)
+	Dimension vectorC(filas)
+	Dimension vectorD(filas*columnas)
+	
+	
+	Para i <- 0 hasta filas - 1 Hacer
+		sumacolumna <- 0
+		Para j <- 0 hasta columnas - 1 Hacer
+			matriz(i,j) <- Aleatorio(1,7)
+			Si i+j = filas - 1 Entonces
+				vectorA(i) <- matriz(i,j)
+			FinSi
+			Si i = j Entonces
+				vectorB(i) <- (2*(matriz(i,j)))
+			FinSi
+			Si j < columnas - 1 Entonces
+				sumaColumna <- sumaColumna + matriz(i,j)
+				
+			SiNo
+				vectorC(i) <- sumaColumna + matriz(i,j)
+			FinSi
+		FinPara
+	FinPara
+	
+	
+	Para i <- 0 hasta filas - 1 Hacer
+		Para j <- 0 hasta columnas - 1 Hacer
+			Mostrar "[",matriz(i,j),"]" Sin Saltar
+		FinPara
+		Mostrar ""
+	FinPara
+	Mostrar ""
+	Para i <- 0 hasta filas - 1 Hacer
+		Mostrar "[",vectorA(i),"]" Sin Saltar
+	FinPara
+	
+	Mostrar ""
+	Mostrar ""
+
+	Para i <- 0 hasta filas - 1 Hacer
+		Mostrar "[",vectorB(i),"]" Sin Saltar
+	FinPara
+	
+	Mostrar ""
+	Mostrar ""
+	
+	Para i <- 0 hasta columnas - 1 Hacer
+		Mostrar "[",vectorC(i),"]" Sin Saltar
+	FinPara
+	
+	Mostrar ""
+	Mostrar ""
+	
+	Para i <- 0 hasta filas - 1 Hacer
+		Para j <- 0 hasta columnas - 1 Hacer
+			vectorD(i) <- matriz(i,j)
+			MOstrar "[",vectorD(i),"]" Sin Saltar
+		FinPara
+	FinPara
+	Mostrar "Gracias"
+FinProceso

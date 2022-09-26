@@ -1,0 +1,1 @@
+Ejercicio 1: Determinar si un vector es palíndromo o no

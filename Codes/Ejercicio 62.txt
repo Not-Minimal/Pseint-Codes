@@ -1,0 +1,18 @@
+Proceso sucesion
+	Definir n Como Entero
+	Repetir 
+		Leer n 
+	Hasta Que n > 1
+	
+	Dimension arreglo(n)
+	
+	Para i <- 0 Hasta n - 1 Hacer
+		
+		arreglo(i) <- (3/(i+1))
+	FinPara
+	
+	Para i <- 0 Hasta n - 1 Hacer
+		Mostrar "[",arreglo(i),"]"
+	FinPara
+	
+FinProceso

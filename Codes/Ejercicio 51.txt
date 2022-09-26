@@ -1,0 +1,158 @@
+Proceso ejercicio_1_Saul_Munoz
+	Definir filas, columnas, x, menor, mayor, SumaDP, promedio, busqueda, valorBusqueda, bandera Como Entero
+	
+	Repetir
+		Mostrar "Ingrese el numero de filas"
+		leer filas
+	Hasta Que filas > 1
+	
+	Repetir
+		Mostrar "Ingrese el numero de columnas"
+		leer columnas
+	Hasta Que columnas > 1
+	
+	Dimension vector(filas, columnas)
+	Mostrar "a) Ingrese la opcion:"
+	Mostrar "	1) Ingresar valores manualmente con rango[10, 50]"
+	Mostrar "	2) Valores asignados de forma aleatoria con rango[10, 50]"
+	
+	Repetir
+		leer x
+	Hasta Que x = 1 o x = 2
+	
+	Si x = 1 Entonces
+		Para i <- 0 hasta filas - 1 Hacer
+			para j <- 0 hasta columnas - 1 Hacer
+				Repetir
+					Mostrar "Ingrese valor en rango [10, 50]"
+					leer vector(i,j)
+				Hasta Que (vector(i,j) >= 10) y (vector(i,j) <= 50)
+			FinPara
+		FinPara
+	FinSi
+	
+	Si x = 2 Entonces
+		Para i <- 0 hasta filas - 1 Hacer
+			para j <- 0 hasta columnas - 1 Hacer
+				vector(i,j) <- Aleatorio(10,50)
+			FinPara
+		FinPara
+	FinSi	
+	
+	Mostrar "El arreglo es: "
+	Para i <- 0 hasta filas - 1 Hacer
+		Para j <- 0 Hasta columnas - 1 Hacer
+			 Mostrar "[", vector(i,j), "]" Sin Saltar
+		FinPara
+		Mostrar " "
+	FinPara	
+	
+	mayor <- vector(0,0)
+	menor <- vector(0,0)
+	
+	Para i <- 0 Hasta filas - 1 Hacer
+		Para j<-0 Hasta columnas - 1 Hacer
+			Si (mayor < vector(i,j)) Entonces
+				mayor <- vector(i,j)
+			Fin Si
+			Si (menor > vector(i,j)) Entonces
+				menor <- vector(i,j)
+			Fin Si
+		Fin Para
+	Fin Para
+	Mostrar ""
+	Mostrar "b) Mayor y menor"
+	Mostrar "	- El mayor valor es: " mayor
+	Mostrar "	- El menor valor es: " menor
+	Mostrar ""
+	Mostrar "c) Repetición"
+	
+	
+	masrep <- 0
+	Para i <- 0 hasta filas - 1 hacer
+		Para j <- 0 hasta columnas - 1 hacer
+			contador2 <- 0
+			Para k <- i hasta filas - 1 hacer
+				Para l <- j hasta columnas - 1 hacer
+					si vector(i,j) = vector(k,l) entonces
+						contador2 <- contador2 + 1
+					FinSi
+				Finpara
+			FinPara
+				si contador2 > masrep entonces
+					masrep <- contador2 
+					rep <- vector(i,j)
+				Finsi
+		Finpara
+	Finpara
+	
+	Mostrar "	- El numero que mas se repite es [", rep,"] con, ",masrep, " veces."
+	
+	SumaDP <- 0
+	Promedio <- 0
+	Si (filas == columnas) Entonces
+		Para i <- 0 Hasta filas - 1 Hacer
+			Para j <- 0 Hasta columnas -1 Hacer
+				Si i = j Entonces
+					SumaDP <- (SumaDP + vector(i,j))
+				FinSi
+				Si i+j = filas - 1 Entonces
+					Promedio = Promedio + vector(i,j)
+				FinSi
+			FinPara
+		FinPara
+		Mostrar "d) Suma y promedio"
+		Mostrar "	- La suma de la Diagonal Principal es: ", SumaDP
+		Mostrar "	- El promedio de la diagonal secundaria es: ", (Promedio/filas)
+	FinSi
+	
+	Mostrar ""
+	//Crear vector para buscar dentro de la matriz los numeros elegidos, debe qu
+	
+	Mostrar "e) Buscar arreglo dentro de la matriz"
+	Mostrar ""
+	Repetir
+		Mostrar "- Ingrese el tamaño del vector que desea buscar"
+		leer busqueda
+	Hasta Que (busqueda > 1) y (busqueda <= (filas*columnas))
+	
+	Dimension vector2(busqueda)
+	valorBusqueda <- 0
+	
+	Repetir
+		Mostrar "Ingrese el valor N°",(valorBusqueda + 1), " del Rango [10,50]"
+		Repetir
+			leer vector2[valorBusqueda]
+		Hasta Que (vector2[valorBusqueda] >= 10) y (vector2[valorBusqueda] <= 50)
+		valorBusqueda <- (valorBusqueda + 1)
+	Hasta Que valorBusqueda = busqueda
+	
+	bandera <- 0
+	contador <- 0
+	valorBusqueda <- 0
+	Para k <- 0  Hasta filas - 1 Hacer
+	
+		Para l <- 0 Hasta columnas - 1 Hacer
+			Si vector(k,l) == vector2[valorBusqueda] Entonces
+				contador = contador + 1
+				valorBusqueda <- valorBusqueda + 1 
+			SiNo
+				valorBusqueda <-0
+				contador <- 0
+			FinSi
+			Si contador = Busqueda Entonces
+					bandera <- 1
+					k <- filas
+					l <- columnas
+				FinSi
+		Fin Para
+	Fin Para
+
+	Si bandera == 0 Entonces
+		Mostrar "El vector no se encuentra dentro de la matriz";
+	SiNo
+		Mostrar "El vector se encuentra dentro de la matriz";
+	Fin Si
+	Mostrar ""
+	Mostrar "!Gracias¡"
+FinProceso

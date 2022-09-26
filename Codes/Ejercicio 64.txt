@@ -1,0 +1,53 @@
+Proceso subConjunto
+	Definir n, m Como Entero
+	
+	Mostrar "Ingrese el tamaño del conjunto B"
+	Repetir
+		Leer m
+	Hasta Que m > 1
+	
+	Dimension B(m)
+	
+	Mostrar "Ingrese el tamaño del conjunto A"
+	Repetir
+		Leer n
+	Hasta Que n > 1 y n < m
+	
+	Dimension A(n)
+	
+	Para i <- 0 hasta m - 1 Hacer
+		Mostrar "Valor Conjunto B para posicion N°", i+1
+		Leer B(i)
+	FinPara
+	
+	Bandera <- 0
+	contador <- 0
+	Para i <- 0 hasta n - 1 Hacer
+		Mostrar "Valor Conjunto A para posicion N°", i+1
+		Leer A(i)
+		Si A(i) == B(i) Entonces
+			Bandera <- 1
+			contador <- contador + 1
+		FinSi
+		Si contador = B(i) Entonces
+			bandera <- 1
+		FinSi
+	FinPara
+	
+	Para i <- 0 Hasta  m - 1
+		Mostrar "[",B(i),"]" Sin Saltar
+	FinPara
+	Mostrar ""
+	Mostrar ""
+	Para i <- 0 Hasta  n- 1
+		Mostrar "[",A(i),"]" Sin Saltar
+	FinPara
+	
+	Mostrar ""
+	Si Bandera <> 1  Entonces
+		Escribir "A no es subconjunto de B"
+	SiNo
+		Escribir "A si es subconjunto de B"
+	FinSi
+	
+FinProceso
