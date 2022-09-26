@@ -1,0 +1,11 @@
+Proceso ejercicio1
+	Definir x1, x2, resultado Como Real
+	Escribir "Ingrese primera y segunda variable para realizar división:"
+	Leer x1, x2
+	Si x2 = 0 Entonces
+		Mostrar "Debe ser distinto de 0"
+	SiNo
+		resultado <- x1 / x2
+		Mostrar "La division de: ", x1, " / ", x2, " es: ", resultado 
+	Fin Si
+FinProceso

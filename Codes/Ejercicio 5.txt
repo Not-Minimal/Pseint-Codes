@@ -1,0 +1,9 @@
+Algoritmo resultadoEcuacion
+	Definir x1, x2, y1, y2, resultado Como Real
+	Mostrar "Ingrese punto 1 (x,y)"
+	leer x1, y1
+	Mostrar "Ingrese punto 1 (x,y)"
+	Leer x2, y2
+	resultado <- (y2-y1)/(x2-x1)
+	Mostrar "La pendiente de la recta entre los puntos es: ", resultado
+FinAlgoritmo

@@ -1,0 +1,9 @@
+
+Algoritmo resultadoEcuacion
+	Definir a,b, resultado Como Real
+	leer a, b
+	a <- (a*a*a)*5
+	b <- (b*b)*2
+	resultado <- a+b-30
+	Mostrar "El resultado de la ecuacion: ",  a, "+",b,"-", "es: ", resultado
+FinAlgoritmo

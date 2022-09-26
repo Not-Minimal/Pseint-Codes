@@ -1,0 +1,6 @@
+Algoritmo resultadoEcuacion
+	Definir a, resultado Como Real
+	leer a
+	resultado <- (((3*a)+2)/3)
+	Mostrar "El resultado de la ecuacion es: ", resultado
+FinAlgoritmo

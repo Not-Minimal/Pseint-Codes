@@ -1,0 +1,7 @@
+Algoritmo resultadoEcuacion
+	Definir x1, x2, y1, y2, resultado Como Real
+	Mostrar "Ingrese 4 puntos del plano cartesiano, tales que sean x1, x2, y1 e y2"
+	leer x1, x2, y1, y2
+	resultado <- raiz((((x2-x1)*(x2-x1))+((y2-y1)*(y2-y1))))
+	Mostrar "La diferencia entre los puntos es: ", resultado
+FinAlgoritmo

@@ -1,0 +1,6 @@
+Algoritmo calcularIva
+	Definir a,b Como Real
+	Leer a
+	b <- a*0.19
+	Mostrar "el iva del producto ingresado es: ", b
+FinAlgoritmo
